@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants" >
+    
+
+    <TextView
+        android:id="@+id/TodoSelectTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="4dp"
+        android:text="@string/todotitle"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/todoSelectDeadlineLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/todoSelectDeadline"
+        android:layout_alignBottom="@+id/todoSelectDeadline"
+        android:layout_alignParentLeft="true"
+        android:padding="4dp"
+        android:text="@string/deadline_" />
+
+    <TextView
+        android:id="@+id/todoSelectDeadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TodoSelectTitle"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/todoSelectDeadlineLabel"
+        android:padding="4dp"
+        android:text="@string/deadline" />
+
+    <CheckBox
+        android:id="@+id/todoSelectCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TodoSelectTitle"
+        android:layout_alignBottom="@+id/TodoSelectTitle"
+        android:layout_alignParentRight="true"
+        android:padding="4dp" />
+
+</RelativeLayout>
+
+

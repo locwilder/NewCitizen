@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="false"
+    android:focusable="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@layout/header_gradient"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_below="@id/header"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/TodoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/todotitle"
+            android:textSize="35sp" />
+
+        <EditText
+            android:id="@+id/todotitleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:paddingBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="5dp" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/deadlineLable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/deadline"
+                    android:textSize="25sp" />
+
+                <DatePicker
+                    android:id="@+id/datePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:calendarViewShown="false"
+                    android:gravity="right" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/DeadlineEditText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="5dp" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/priorityLable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerInParent="true"
+                    android:text="@string/priorityLabel"
+                    android:textSize="25sp" />
+
+                <Spinner
+                    android:id="@+id/priospinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:entries="@array/priority"
+                    android:gravity="right" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <TextView
+                android:id="@id/categoryLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kategorielable"
+                android:textSize="25sp" />
+
+                <Spinner
+                    android:id="@+id/categorySpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:entries="@array/category"
+                    android:gravity="right" />
+
+            </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="119dp" >
+
+                <EditText
+                    android:id="@+id/cityEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/streetEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/areacodeEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/adressLable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:text="@string/adresselable"
+                    android:textSize="25sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="5dp" >
+
+            <TextView
+                android:id="@+id/remarksLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remarkslabel"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/remarksEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                
+                android:singleLine="false"
+            
+                android:inputType="textMultiLine">
+
+                <requestFocus />
+            </EditText>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_alignParentBottom="true"
+            android:background="@layout/footer_repeat"
+            android:orientation="vertical" >
+
+		</LinearLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_centerHorizontal="true"
+        android:text="@string/save" />
+
+</RelativeLayout>

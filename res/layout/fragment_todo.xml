@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/todoFragment"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="false"
+    android:focusable="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/TodoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/todotitle"
+            android:textSize="35sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp" >
+
+            <TextView
+                android:id="@+id/deadlineLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deadline"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/TodoDeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_view_placeholder"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp" >
+
+            <TextView
+                android:id="@+id/priorityLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/priorityLabel"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/todoPriorityView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/text_view_placeholder"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp" >
+
+            <TextView
+                android:id="@+id/categoryLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kategorieview"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/todoCategoryView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/text_view_placeholder"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp" >
+
+            <TextView
+                android:id="@+id/adressLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adresselable"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/todoAdressView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_view_placeholder"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/todoDocumentsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/dokumentslabel"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/todoDocumentsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_view_placeholder"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="5dp" >
+
+            <TextView
+                android:id="@+id/remarksLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remarkslabel"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/todoRemarksTextField"
+                android:layout_width="353dp"
+                android:layout_height="match_parent"
+                android:layout_weight="14"
+               android:inputType="textMultiLine" 
+                android:singleLine="false">
+
+                <requestFocus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </EditText>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/gotoselectButton"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/backtoselect" />
+
+            <Button
+                android:id="@+id/adjustButton"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/adjust" />
+
+            <Button
+                android:id="@+id/navigateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/start_navigation" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/doneCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|start|center_horizontal"
+        android:text="@string/done_checkbox"
+        android:textSize="24sp" />
+
+</RelativeLayout> <!-- android:background="@drawable/merkzettel" -->
